@@ -1,0 +1,282 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: bank_help
+  steps:
+  - intent: bank
+  - action: utter_bank
+
+
+- story: apply_for_leave
+  steps:
+  - intent: apply_for_leave
+  - action: utter_secret_key
+  - intent: get_secret_key
+    entities:
+      - sk: abc123
+  - slot_was_set:
+      - sk: sk
+  - action: action_secret_key
+  - action: utter_type_of_leave
+  - intent: get_type_of_leave
+    entities:
+      - l_type: pl
+  - slot_was_set:
+      - l_type: l_type
+  - action: action_leave_type
+  - action: utter_ask_start_date
+  - intent: get_start_date
+    entities:
+      - st_dt: from 04/05/2023
+  - slot_was_set:
+      - st_dt: st_dt
+  - action: action_start_date
+  - action: utter_ask_end_date
+  - intent: get_end_date
+    entities:
+      - ed_dt: to 10-05-2023
+  - slot_was_set:
+      - ed_dt: ed_dt
+  - action: action_end_date
+  - action: utter_ask_reason_for_leave
+  - intent: get_reason_for_leave
+    entities:
+      - reason: Health issue
+  - slot_was_set:
+      - reason: reason
+  - action: action_reason_type
+  - action: utter_thanks_leave
+
+
+
+- story: apply_for_early_going
+  steps:
+  - intent: apply_for_early_going
+  - action: utter_secret_key
+  - intent: get_secret_key
+    entities:
+      - sk: abc123
+  - slot_was_set:
+      - sk: sk
+  - action: action_secret_key
+  - action: utter_ask_date_of_eg
+  - intent: get_date
+    entities:
+      - date: 13 05 2023
+  - slot_was_set:
+      - date: date
+  - action: action_date
+  - action: utter_ask_start_time
+  - intent: get_start_time
+    entities:
+      - st_time: 10:02
+  - slot_was_set:
+      - st_time: st_time
+  - action: action_start_time
+  - action: utter_ask_end_time
+  - intent: get_end_time
+    entities:
+      - ed_time: 12-20
+  - slot_was_set:
+      - ed_time: ed_time
+  - action: action_end_time
+  - action: utter_ask_location
+  - intent: get_location
+    entities:
+      - location: kalol
+  - slot_was_set:
+      - location: location
+  - action: action_location
+  - action: utter_ask_reason_for_leave
+  - intent: get_reason_for_leave
+    entities:
+      - reason: Health issue
+  - slot_was_set:
+      - reason: reason
+  - action: action_reason
+  - action: action_early_going
+  - action: utter_thanks_eg
+
+
+- story: apply_for_late_coming
+  steps:
+  - intent: apply_for_late_coming
+  - action: utter_secret_key
+  - intent: get_secret_key
+    entities:
+      - sk: abc123
+  - slot_was_set:
+      - sk: sk
+  - action: action_secret_key
+  - action: utter_ask_date_of_lc
+  - intent: get_date
+    entities:
+      - date: 13 05 2023
+  - slot_was_set:
+      - date: date
+  - action: action_date
+  - action: utter_ask_start_time
+  - intent: get_start_time
+    entities:
+      - st_time: 10:02
+  - slot_was_set:
+      - st_time: st_time
+  - action: action_start_time
+  - action: utter_ask_end_time
+  - intent: get_end_time
+    entities:
+      - ed_time: 12-20
+  - slot_was_set:
+      - ed_time: ed_time
+  - action: action_end_time
+  - action: utter_ask_location
+  - intent: get_location
+    entities:
+      - location: kalol
+  - slot_was_set:
+      - location: location
+  - action: action_location
+  - action: utter_ask_reason_for_leave
+  - intent: get_reason_for_leave
+    entities:
+      - reason: Health issue
+  - slot_was_set:
+      - reason: reason
+  - action: action_reason
+  - action: action_late_coming
+  - action: utter_thanks_lc
+
+
+#for Tour
+- story: apply_for_od
+  steps:
+  - intent: apply_for_od
+  - action: utter_secret_key
+  - intent: get_secret_key
+    entities:
+      - sk: abc123
+  - slot_was_set:
+      - sk: sk
+  - action: action_secret_key
+  - action: utter_ask_start_date
+  - intent: get_start_date
+    entities:
+      - st_dt: from 04/05/2023
+  - slot_was_set:
+      - st_dt: st_dt
+  - action: action_start_date
+  - action: utter_ask_end_date
+  - intent: get_end_date
+    entities:
+      - ed_dt: to 10-05-2023
+  - slot_was_set:
+      - ed_dt: ed_dt
+  - action: action_end_date
+  - action: utter_ask_start_time
+  - intent: get_start_time
+    entities:
+      - st_time: 10:02
+  - slot_was_set:
+      - st_time: st_time
+  - action: action_start_time
+  - action: utter_ask_end_time
+  - intent: get_end_time
+    entities:
+      - ed_time: 12-20
+  - slot_was_set:
+      - ed_time: ed_time
+  - action: action_end_time
+  - action: utter_ask_location
+  - intent: get_location
+    entities:
+      - location: kalol
+  - slot_was_set:
+      - location: location
+  - action: action_location
+  - action: utter_ask_reason_for_leave
+  - intent: get_reason_for_leave
+    entities:
+      - reason: Health issue
+  - slot_was_set:
+      - reason: reason
+  - action: action_reason
+  - action: action_od_tour
+  - action: utter_thanks_od_tour
+
+
+# for od
+- story: apply_for_OD
+  steps:
+  - intent: apply_for_od_only
+  - action: utter_secret_key
+  - intent: get_secret_key
+    entities:
+      - sk: abc123
+  - slot_was_set:
+      - sk: sk
+  - action: action_secret_key
+  - action: utter_ask_date_of_od
+  - intent: get_date
+    entities:
+      - date: 13 05 2023
+  - slot_was_set:
+      - date: date
+  - action: action_date
+  - action: utter_ask_start_time
+  - intent: get_start_time
+    entities:
+      - st_time: 10:02
+  - slot_was_set:
+      - st_time: st_time
+  - action: action_start_time
+  - action: utter_ask_end_time
+  - intent: get_end_time
+    entities:
+      - ed_time: 12-20
+  - slot_was_set:
+      - ed_time: ed_time
+  - action: action_end_time
+  - action: utter_ask_location
+  - intent: get_location
+    entities:
+      - location: kalol
+  - slot_was_set:
+      - location: location
+  - action: action_location
+  - action: utter_ask_reason_for_leave
+  - intent: get_reason_for_leave
+    entities:
+      - reason: Health issue
+  - slot_was_set:
+      - reason: reason
+  - action: action_reason
+  - action: action_od_only
+  - action: utter_thanks_od_only

@@ -1,0 +1,163 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - cl
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - pl
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bank
+  examples: |
+    - icici
+    - hdfc
+    - axis
+- intent: apply_for_leave
+  examples: |
+    - B
+    - b
+# apply_for_od is for Tour apply
+- intent: apply_for_od
+  examples: |
+    - c
+    - C
+- intent: apply_for_late_coming
+  examples: |
+    - D
+    - d
+- intent: apply_for_early_going
+  examples: |
+    - E
+    - e
+- intent: apply_for_od_only
+  examples: |
+    - F
+    - f
+- intent: get_secret_key
+  examples: |
+    - [abc123](sk)
+    - [xyz123](sk)
+    - [asd321](sk)
+    - [qwer12](sk)
+- intent: get_type_of_leave
+  examples: |
+    - [cl](l_type)
+    - [pl](l_type)
+- intent: get_start_date
+  examples: |
+    - [04/05/2023](st_dt)
+    - from [10/07/2023](st_dt)
+    - start [15/08/2023](st_dt)
+- intent: get_end_date
+  examples: |
+    - [10-05-2023](ed_dt)
+    - to [01-10-2024](ed_dt)
+    - end [20-09-2021](ed_dt)
+- intent: get_date 
+  examples: |
+    - [01 05 2023](date)
+    - on [11 10 2024](date)
+    - [21 01 2021](date)
+- intent: get_start_time
+  examples: |
+    - [10:02](st_time)
+    - [16:12](st_time)
+- intent: get_end_time
+  examples: |
+    - [12-20](ed_time)
+    - [18-30](ed_time)
+- intent: get_location
+  examples: |
+    - [Ahemdabad](location)
+    - [Mumbai](location)
+    - [Kalol](location)
+    - [gandhinagar](location)
+- intent: get_reason_for_leave
+  examples: |
+    - [issue](reason)
+    - [problem](reason)
+    - [work](reason)
+    - [family issue](reason)
+    - [personal issue](reason)
+    - [social issue](reason)
+    - [family problem](reason)
+    - [personal problem](reason)
+    - [social problem](reason)
+    - [family work](reason)
+    - [personal work](reason)
+    - [social work](reason)
+- intent: confirm_details
+  examples: |
+    - yes
+    - no

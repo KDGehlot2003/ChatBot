@@ -1,0 +1,52 @@
+version: "3.1"
+
+rules:
+
+#- rule: Say goodbye anytime the user says goodbye
+#  steps:
+#  - intent: goodbye
+#  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: start date
+  steps:
+  - intent: get_start_date
+  - action: action_start_date
+  - action: utter_ask_end_date
+
+#- rule: end date
+#  steps:
+#  - intent: get_end_date
+#  - action: action_end_date
+#  - action: utter_ask_reason_for_leave
+
+#- rule: reason
+#  steps:
+#  - intent: get_reason_for_leave
+#  - action: action_reason_type
+- rule: date
+  steps:
+  - intent: get_date
+  - action: action_date
+  - action: utter_ask_start_time
+
+- rule: start time
+  steps:
+  - intent: get_start_time
+  - action: action_start_time
+  - action: utter_ask_end_time
+
+- rule: end time
+  steps:
+  - intent: get_end_time
+  - action: action_end_time
+  - action: utter_ask_location
+
+#- rule: location
+#  steps:
+#  - intent: get_reason_for_leave
+#  - action: action_reason_type

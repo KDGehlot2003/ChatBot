@@ -1,0 +1,14 @@
+[
+  {
+    "name": "issue",
+    "pattern": "[\\bholiday\\b](reason)"
+  },
+  {
+    "name": "issue",
+    "pattern": "[\\bissue\\b](reason)"
+  },
+  {
+    "name": "issue",
+    "pattern": "[\\bwork\\b](reason)"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_start_date\"}}]": "action_start_date",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_start_date\"}}, {\"prev_action\": {\"action_name\": \"action_start_date\"}, \"user\": {\"intent\": \"get_start_date\"}}]": "utter_ask_end_date",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_start_date\"}}, {\"prev_action\": {\"action_name\": \"action_start_date\"}, \"user\": {\"intent\": \"get_start_date\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_end_date\"}, \"user\": {\"intent\": \"get_start_date\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_end_time\"}}]": "action_end_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_end_time\"}}, {\"prev_action\": {\"action_name\": \"action_end_time\"}, \"user\": {\"intent\": \"get_end_time\"}}]": "utter_ask_location",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_end_time\"}}, {\"prev_action\": {\"action_name\": \"action_end_time\"}, \"user\": {\"intent\": \"get_end_time\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_location\"}, \"user\": {\"intent\": \"get_end_time\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_date\"}}]": "action_date",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_date\"}}, {\"prev_action\": {\"action_name\": \"action_date\"}, \"user\": {\"intent\": \"get_date\"}}]": "utter_ask_start_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_date\"}}, {\"prev_action\": {\"action_name\": \"action_date\"}, \"user\": {\"intent\": \"get_date\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_start_time\"}, \"user\": {\"intent\": \"get_date\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_start_time\"}}]": "action_start_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_start_time\"}}, {\"prev_action\": {\"action_name\": \"action_start_time\"}, \"user\": {\"intent\": \"get_start_time\"}}]": "utter_ask_end_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_start_time\"}}, {\"prev_action\": {\"action_name\": \"action_start_time\"}, \"user\": {\"intent\": \"get_start_time\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_end_time\"}, \"user\": {\"intent\": \"get_start_time\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent back"
+    ]
+  }
+}

@@ -1,0 +1,194 @@
+version: '3.1'
+intents:
+- affirm
+- apply_for_leave
+- bank
+- bot_challenge
+- deny
+- get_end_date
+- get_reason_for_leave
+- get_secret_key
+- get_type_of_leave
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- get_start_date
+- confirm_details
+- get_start_time
+- get_end_time
+- get_location
+- get_date
+- apply_for_early_going
+- apply_for_late_coming
+- apply_for_od
+- apply_for_od_only
+entities:
+- reason
+- ed_dt
+- l_type
+- sk
+- firstN
+- id
+- st_dt
+- st_time 
+- ed_time 
+- location
+- date
+slots:
+  sk:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: sk
+  date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: date
+  l_type:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: l_type
+  st_dt:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: st_dt
+  ed_dt:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: ed_dt
+  reason:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: reason
+  st_time:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: st_time
+  ed_time:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: ed_time
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: location
+
+
+responses:
+  utter_ask_reason_for_leave:
+  - text: 'Enter the reason for leave: '
+  utter_secret_key:
+  - text: 'Enter the Secret Key: '
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_bank:
+  - text: 'Check Balance:'
+    buttons:
+    - title: Current
+      payload: /current
+    - title: Saving
+      payload: /saving
+  utter_ask_start_date:
+  - text: Enter start date?
+  utter_ask_end_date:
+  - text: Enter end date?
+  utter_ask_id:
+  - text: 'Enter your id:'
+  utter_type_of_leave:
+  - text: 'Choose the type of Leave (cl/pl):'
+  utter_ask_date_of_eg:
+  - text: Enter the date of early going ?
+  utter_ask_date_of_lc:
+  - text: Enter the date of late coming ?
+  utter_ask_date_of_od:
+  - text: Enter the date of OD ?
+  utter_ask_start_time:
+  - text: Enter the start time ?
+  utter_ask_end_time:
+  - text: Enter the end time ?
+  utter_ask_location:
+  - text: Enter the location ?
+  utter_thanks_leave:
+  - text: Thanks! for applying leave...
+  utter_thanks_eg:
+  - text: Thanks! for applying Early going...
+  utter_thanks_lc:
+  - text: Thanks! for applying Late coming...
+  utter_thanks_od_tour:
+  - text: Thanks! for applying Tour...
+  utter_thanks_od_only:
+  - text: Thanks! for applying OD...
+  utter_reason_for_leave:
+  - text: Enter reason for leave
+    buttons:
+    - title: CL
+      payload: cl
+    - title: PL
+      payload: pl
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- action_create_database
+- action_hello_world
+- action_leave_type
+- action_secret_key
+- utter_ask_end_date
+- utter_ask_reason_for_leave
+- utter_secret_key
+- utter_ask_start_date
+- utter_reason_for_leave
+- utter_type_of_leave
+- action_start_date
+- action_end_date
+- action_reason_type
+- utter_ask_date_of_eg
+- action_date
+- action_start_time
+- action_end_time
+- action_location
+- action_reason
+- action_early_going
+- utter_ask_location
+- utter_ask_start_time
+- utter_ask_end_time
+- action_late_coming
+- action_od_tour
+- utter_ask_date_of_lc
+- utter_thanks_leave
+- utter_thanks_eg
+- utter_thanks_lc
+- utter_thanks_od_tour
+- action_od_only
+- utter_thanks_od_only
+- utter_ask_date_of_od

@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-ed_dt",
+      "2": "I-ed_dt",
+      "3": "L-ed_dt",
+      "4": "U-ed_dt",
+      "5": "B-l_type",
+      "6": "I-l_type",
+      "7": "L-l_type",
+      "8": "U-l_type",
+      "9": "B-reason",
+      "10": "I-reason",
+      "11": "L-reason",
+      "12": "U-reason",
+      "13": "B-sk",
+      "14": "I-sk",
+      "15": "L-sk",
+      "16": "U-sk",
+      "17": "B-st_dt",
+      "18": "I-st_dt",
+      "19": "L-st_dt",
+      "20": "U-st_dt",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-ed_dt": 1,
+      "I-ed_dt": 2,
+      "L-ed_dt": 3,
+      "U-ed_dt": 4,
+      "B-l_type": 5,
+      "I-l_type": 6,
+      "L-l_type": 7,
+      "U-l_type": 8,
+      "B-reason": 9,
+      "I-reason": 10,
+      "L-reason": 11,
+      "U-reason": 12,
+      "B-sk": 13,
+      "I-sk": 14,
+      "L-sk": 15,
+      "U-sk": 16,
+      "B-st_dt": 17,
+      "I-st_dt": 18,
+      "L-st_dt": 19,
+      "U-st_dt": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]
